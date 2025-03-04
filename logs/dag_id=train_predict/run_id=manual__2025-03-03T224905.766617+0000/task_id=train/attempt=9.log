@@ -1,0 +1,180 @@
+[2025-03-03T23:13:45.917+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-03T23:13:45.949+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: train_predict.train manual__2025-03-03T22:49:05.766617+00:00 [queued]>
+[2025-03-03T23:13:45.966+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: train_predict.train manual__2025-03-03T22:49:05.766617+00:00 [queued]>
+[2025-03-03T23:13:45.968+0000] {taskinstance.py:2865} INFO - Starting attempt 9 of 9
+[2025-03-03T23:13:45.996+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): train> on 2025-03-03 22:49:05.766617+00:00
+[2025-03-03T23:13:46.013+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'train_predict', 'train', 'manual__2025-03-03T22:49:05.766617+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/train_predict.py', '--cfg-path', '/tmp/tmpicwdknan']
+[2025-03-03T23:13:46.014+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=7418) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-03T23:13:46.016+0000] {standard_task_runner.py:105} INFO - Job 22: Subtask train
+[2025-03-03T23:13:46.016+0000] {standard_task_runner.py:72} INFO - Started process 7421 to run task
+[2025-03-03T23:13:46.102+0000] {task_command.py:467} INFO - Running <TaskInstance: train_predict.train manual__2025-03-03T22:49:05.766617+00:00 [running]> on host b756940c1467
+[2025-03-03T23:13:46.271+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='train_predict' AIRFLOW_CTX_TASK_ID='train' AIRFLOW_CTX_EXECUTION_DATE='2025-03-03T22:49:05.766617+00:00' AIRFLOW_CTX_TRY_NUMBER='9' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-03T22:49:05.766617+00:00'
+[2025-03-03T23:13:46.273+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-03-03T23:13:46.279+0000] {logging_mixin.py:190} INFO - 1
+[2025-03-03T23:13:46.281+0000] {logging_mixin.py:190} INFO - 2
+[2025-03-03T23:13:46.282+0000] {logging_mixin.py:190} INFO - 3
+[2025-03-03T23:13:46.937+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-03-03T23:13:46.938+0000] {logging_mixin.py:190} INFO - 4
+[2025-03-03T23:13:47.171+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-03-03T23:13:47.479+0000] {cursor.py:1156} INFO - Number of results in first chunk: 90
+[2025-03-03T23:13:47.483+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 3, 3), 168.66, 'GOOG')
+[2025-03-03T23:13:47.485+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 28), 172.22, 'GOOG')
+[2025-03-03T23:13:47.486+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 27), 170.21, 'GOOG')
+[2025-03-03T23:13:47.486+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 26), 174.7, 'GOOG')
+[2025-03-03T23:13:47.487+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 25), 177.37, 'GOOG')
+[2025-03-03T23:13:47.488+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 24), 181.19, 'GOOG')
+[2025-03-03T23:13:47.490+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 21), 181.58, 'GOOG')
+[2025-03-03T23:13:47.491+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 20), 186.64, 'GOOG')
+[2025-03-03T23:13:47.491+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 19), 187.13, 'GOOG')
+[2025-03-03T23:13:47.493+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 18), 185.8, 'GOOG')
+[2025-03-03T23:13:47.494+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 14), 186.87, 'GOOG')
+[2025-03-03T23:13:47.495+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 13), 187.88, 'GOOG')
+[2025-03-03T23:13:47.496+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 12), 185.43, 'GOOG')
+[2025-03-03T23:13:47.497+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 11), 187.07, 'GOOG')
+[2025-03-03T23:13:47.498+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 10), 188.2, 'GOOG')
+[2025-03-03T23:13:47.499+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 7), 187.14, 'GOOG')
+[2025-03-03T23:13:47.500+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 6), 193.31, 'GOOG')
+[2025-03-03T23:13:47.501+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 5), 193.3, 'GOOG')
+[2025-03-03T23:13:47.502+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 4), 207.71, 'GOOG')
+[2025-03-03T23:13:47.503+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 2, 3), 202.64, 'GOOG')
+[2025-03-03T23:13:47.504+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 31), 205.6, 'GOOG')
+[2025-03-03T23:13:47.505+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 30), 202.63, 'GOOG')
+[2025-03-03T23:13:47.506+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 29), 197.18, 'GOOG')
+[2025-03-03T23:13:47.507+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 28), 197.07, 'GOOG')
+[2025-03-03T23:13:47.508+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 27), 193.77, 'GOOG')
+[2025-03-03T23:13:47.509+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 24), 201.9, 'GOOG')
+[2025-03-03T23:13:47.510+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 23), 199.58, 'GOOG')
+[2025-03-03T23:13:47.511+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 22), 200.03, 'GOOG')
+[2025-03-03T23:13:47.512+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 21), 199.63, 'GOOG')
+[2025-03-03T23:13:47.513+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 17), 197.55, 'GOOG')
+[2025-03-03T23:13:47.514+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 16), 194.41, 'GOOG')
+[2025-03-03T23:13:47.515+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 15), 196.98, 'GOOG')
+[2025-03-03T23:13:47.516+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 14), 191.05, 'GOOG')
+[2025-03-03T23:13:47.517+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 13), 192.29, 'GOOG')
+[2025-03-03T23:13:47.518+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 10), 193.17, 'GOOG')
+[2025-03-03T23:13:47.519+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 8), 195.39, 'GOOG')
+[2025-03-03T23:13:47.520+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 7), 196.71, 'GOOG')
+[2025-03-03T23:13:47.521+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 6), 197.96, 'GOOG')
+[2025-03-03T23:13:47.522+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 3), 193.13, 'GOOG')
+[2025-03-03T23:13:47.522+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2025, 1, 2), 190.63, 'GOOG')
+[2025-03-03T23:13:47.524+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 31), 190.44, 'GOOG')
+[2025-03-03T23:13:47.525+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 30), 192.69, 'GOOG')
+[2025-03-03T23:13:47.526+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 27), 194.04, 'GOOG')
+[2025-03-03T23:13:47.527+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 26), 197.1, 'GOOG')
+[2025-03-03T23:13:47.528+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 24), 197.57, 'GOOG')
+[2025-03-03T23:13:47.529+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 23), 195.99, 'GOOG')
+[2025-03-03T23:13:47.530+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 20), 192.96, 'GOOG')
+[2025-03-03T23:13:47.531+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 19), 189.7, 'GOOG')
+[2025-03-03T23:13:47.532+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 18), 190.15, 'GOOG')
+[2025-03-03T23:13:47.532+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 17), 197.12, 'GOOG')
+[2025-03-03T23:13:47.534+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 16), 198.16, 'GOOG')
+[2025-03-03T23:13:47.535+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 13), 191.38, 'GOOG')
+[2025-03-03T23:13:47.536+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 12), 193.63, 'GOOG')
+[2025-03-03T23:13:47.537+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 11), 196.71, 'GOOG')
+[2025-03-03T23:13:47.538+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 10), 186.53, 'GOOG')
+[2025-03-03T23:13:47.539+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 9), 177.1, 'GOOG')
+[2025-03-03T23:13:47.540+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 6), 176.49, 'GOOG')
+[2025-03-03T23:13:47.541+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 5), 174.31, 'GOOG')
+[2025-03-03T23:13:47.542+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 4), 176.09, 'GOOG')
+[2025-03-03T23:13:47.543+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 3), 173.02, 'GOOG')
+[2025-03-03T23:13:47.544+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 12, 2), 172.98, 'GOOG')
+[2025-03-03T23:13:47.545+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 29), 170.49, 'GOOG')
+[2025-03-03T23:13:47.546+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 27), 170.82, 'GOOG')
+[2025-03-03T23:13:47.547+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 26), 170.62, 'GOOG')
+[2025-03-03T23:13:47.548+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 25), 169.43, 'GOOG')
+[2025-03-03T23:13:47.549+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 22), 166.57, 'GOOG')
+[2025-03-03T23:13:47.551+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 21), 169.24, 'GOOG')
+[2025-03-03T23:13:47.552+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 20), 177.33, 'GOOG')
+[2025-03-03T23:13:47.553+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 19), 179.58, 'GOOG')
+[2025-03-03T23:13:47.554+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 18), 176.8, 'GOOG')
+[2025-03-03T23:13:47.555+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 15), 173.89, 'GOOG')
+[2025-03-03T23:13:47.556+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 14), 177.35, 'GOOG')
+[2025-03-03T23:13:47.557+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 13), 180.49, 'GOOG')
+[2025-03-03T23:13:47.558+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 12), 183.32, 'GOOG')
+[2025-03-03T23:13:47.560+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 11), 181.97, 'GOOG')
+[2025-03-03T23:13:47.561+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 8), 179.86, 'GOOG')
+[2025-03-03T23:13:47.562+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 7), 182.28, 'GOOG')
+[2025-03-03T23:13:47.563+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 6), 178.33, 'GOOG')
+[2025-03-03T23:13:47.564+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 5), 171.41, 'GOOG')
+[2025-03-03T23:13:47.565+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 4), 170.68, 'GOOG')
+[2025-03-03T23:13:47.566+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 11, 1), 172.65, 'GOOG')
+[2025-03-03T23:13:47.567+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 10, 31), 172.69, 'GOOG')
+[2025-03-03T23:13:47.568+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 10, 30), 176.14, 'GOOG')
+[2025-03-03T23:13:47.569+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 10, 29), 171.14, 'GOOG')
+[2025-03-03T23:13:47.570+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 10, 28), 168.34, 'GOOG')
+[2025-03-03T23:13:47.571+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 10, 25), 166.99, 'GOOG')
+[2025-03-03T23:13:47.572+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 10, 24), 164.53, 'GOOG')
+[2025-03-03T23:13:47.573+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 10, 23), 164.48, 'GOOG')
+[2025-03-03T23:13:47.574+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 10, 22), 166.82, 'GOOG')
+[2025-03-03T23:13:47.575+0000] {logging_mixin.py:190} INFO - Shivam (datetime.date(2024, 10, 21), 165.8, 'GOOG')
+[2025-03-03T23:15:05.328+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-03-03T23:15:05.330+0000] {logging_mixin.py:190} INFO - 5
+[2025-03-03T23:15:07.261+0000] {cursor.py:1156} INFO - Number of results in first chunk: 7
+[2025-03-03T23:15:07.262+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-03T23:15:07.285+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-03-03T23:15:07.287+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=train_predict, task_id=train, run_id=manual__2025-03-03T22:49:05.766617+00:00, execution_date=20250303T224905, start_date=20250303T231345, end_date=20250303T231507
+[2025-03-03T23:15:07.369+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-03T23:15:07.389+0000] {taskinstance.py:3925} ERROR - Error scheduling downstream tasks. Skipping it as this is entirely optional optimisation. There might be various reasons for it, please take a look at the stack trace to figure out if the root cause can be diagnosed and fixed. See the issue https://github.com/apache/***/issues/39717 for details and an example problem. If you would like to get help in solving root cause, open discussion with all details with your managed service support or in Airflow repository.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3921, in schedule_downstream_tasks
+    return TaskInstance._schedule_downstream_tasks(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3870, in _schedule_downstream_tasks
+    partial_dag = task.dag.partial_subset(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 2664, in partial_subset
+    t.task_id: _deepcopy_task(t)
+               ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 2661, in _deepcopy_task
+    return copy.deepcopy(t, memo)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 143, in deepcopy
+    y = copier(memo)
+        ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 1388, in __deepcopy__
+    setattr(result, k, copy.deepcopy(v, memo))
+                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 136, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 221, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 136, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 201, in _deepcopy_tuple
+    y = [deepcopy(a, memo) for a in x]
+         ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 162, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 259, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 136, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 221, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 162, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 259, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 136, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 221, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 151, in deepcopy
+    rv = reductor(4)
+         ^^^^^^^^^^^
+TypeError: cannot pickle '_thread.lock' object
+[2025-03-03T23:15:07.401+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

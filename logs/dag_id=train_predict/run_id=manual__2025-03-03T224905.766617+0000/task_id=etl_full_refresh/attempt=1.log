@@ -1,0 +1,173 @@
+[2025-03-03T22:49:09.716+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-03T22:49:09.745+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: train_predict.etl_full_refresh manual__2025-03-03T22:49:05.766617+00:00 [queued]>
+[2025-03-03T22:49:09.762+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: train_predict.etl_full_refresh manual__2025-03-03T22:49:05.766617+00:00 [queued]>
+[2025-03-03T22:49:09.763+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-03-03T22:49:09.790+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): etl_full_refresh> on 2025-03-03 22:49:05.766617+00:00
+[2025-03-03T22:49:09.809+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=6590) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-03T22:49:09.808+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'train_predict', 'etl_full_refresh', 'manual__2025-03-03T22:49:05.766617+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/train_predict.py', '--cfg-path', '/tmp/tmpf6dndv3k']
+[2025-03-03T22:49:09.811+0000] {standard_task_runner.py:72} INFO - Started process 6593 to run task
+[2025-03-03T22:49:09.812+0000] {standard_task_runner.py:105} INFO - Job 13: Subtask etl_full_refresh
+[2025-03-03T22:49:09.899+0000] {task_command.py:467} INFO - Running <TaskInstance: train_predict.etl_full_refresh manual__2025-03-03T22:49:05.766617+00:00 [running]> on host b756940c1467
+[2025-03-03T22:49:10.068+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='train_predict' AIRFLOW_CTX_TASK_ID='etl_full_refresh' AIRFLOW_CTX_EXECUTION_DATE='2025-03-03T22:49:05.766617+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-03T22:49:05.766617+00:00'
+[2025-03-03T22:49:10.070+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-03-03T22:49:14.637+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-03-03T22:49:14.789+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-03-03T22:49:15.724+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-03-03 173.4700 175.0000 167.6400 168.6600 24051664
+[2025-03-03T22:49:17.065+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-28 170.3000 172.5000 168.3900 172.2200 30049812
+[2025-03-03T22:49:17.738+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-27 175.9400 176.5900 169.7520 170.2100 25930530
+[2025-03-03T22:49:18.399+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-26 176.9450 178.0800 173.5900 174.7000 23693251
+[2025-03-03T22:49:19.204+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-25 180.1550 180.7600 176.7700 177.3700 20832485
+[2025-03-03T22:49:19.918+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-24 183.8000 185.0900 180.8800 181.1900 18734014
+[2025-03-03T22:49:20.644+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-21 187.2900 187.4700 181.1300 181.5800 19520782
+[2025-03-03T22:49:21.379+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-20 186.5000 187.1200 184.6000 186.6400 12063807
+[2025-03-03T22:49:22.072+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-19 186.1850 187.3600 185.5000 187.1300 13120465
+[2025-03-03T22:49:22.578+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-18 187.4400 187.7800 183.5800 185.8000 19796028
+[2025-03-03T22:49:23.339+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-14 186.8300 188.1500 186.1100 186.8700 12714154
+[2025-03-03T22:49:23.814+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-13 185.9300 187.9900 184.8800 187.8800 12729334
+[2025-03-03T22:49:24.422+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-12 185.2300 186.8300 183.6300 185.4300 17632314
+[2025-03-03T22:49:24.940+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-11 186.8350 188.8000 186.0800 187.0700 13028100
+[2025-03-03T22:49:25.554+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-10 189.0600 189.9900 187.6100 188.2000 16606020
+[2025-03-03T22:49:26.174+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-07 192.7400 193.0150 185.1000 187.1400 29565724
+[2025-03-03T22:49:26.654+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-06 190.9900 193.8300 190.4900 193.3100 20816593
+[2025-03-03T22:49:27.203+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-05 193.1000 194.5499 189.9100 193.3000 43719589
+[2025-03-03T22:49:27.917+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-04 204.5000 208.7000 204.2600 207.7100 28285436
+[2025-03-03T22:49:28.428+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-02-03 202.2150 205.2200 201.6600 202.6400 16719469
+[2025-03-03T22:49:28.838+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-31 203.7150 207.0800 203.5800 205.6000 17087335
+[2025-03-03T22:49:29.467+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-30 199.7600 203.2384 199.4717 202.6300 14571479
+[2025-03-03T22:49:30.170+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-29 197.3700 198.4595 195.1900 197.1800 12287818
+[2025-03-03T22:49:30.784+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-28 194.6500 197.2300 192.6100 197.0700 15939161
+[2025-03-03T22:49:31.400+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-27 194.1900 198.6700 192.7000 193.7700 24970173
+[2025-03-03T22:49:31.911+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-24 199.8500 202.5700 199.7842 201.9000 12732376
+[2025-03-03T22:49:32.428+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-23 199.9800 201.9400 196.8200 199.5800 15170838
+[2025-03-03T22:49:33.122+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-22 200.5500 202.1200 199.2000 200.0300 15477376
+[2025-03-03T22:49:33.625+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-21 200.5100 203.8400 199.4400 199.6300 19005232
+[2025-03-03T22:49:34.160+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-17 198.0500 198.8100 195.3100 197.5500 22109129
+[2025-03-03T22:49:34.605+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-16 195.8250 196.9799 194.3000 194.4100 13449581
+[2025-03-03T22:49:35.089+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-15 194.3500 197.8000 193.3300 196.9800 12894875
+[2025-03-03T22:49:35.581+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-14 192.5000 193.2700 189.6400 191.0500 13651183
+[2025-03-03T22:49:36.111+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-13 191.3500 192.4900 188.6600 192.2900 13169060
+[2025-03-03T22:49:36.610+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-10 195.4200 197.6200 191.6000 193.1700 20753794
+[2025-03-03T22:49:37.133+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-08 193.9500 197.6400 193.7500 195.3900 14335341
+[2025-03-03T22:49:37.644+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-07 198.2700 202.1400 195.9400 196.7100 16966760
+[2025-03-03T22:49:38.355+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-06 195.1500 199.5600 195.0600 197.9600 19483323
+[2025-03-03T22:49:39.069+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-03 192.7250 194.5000 191.3500 193.1300 12874957
+[2025-03-03T22:49:39.646+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2025-01-02 191.4850 193.2000 188.7100 190.6300 17545162
+[2025-03-03T22:49:40.173+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-31 192.4450 193.2500 189.5800 190.4400 14355221
+[2025-03-03T22:49:40.614+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-30 190.8650 193.7800 190.3600 192.6900 12209534
+[2025-03-03T22:49:41.130+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-27 196.4700 196.8000 191.9720 194.0400 14692994
+[2025-03-03T22:49:41.630+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-26 196.7400 198.1600 195.8700 197.1000 7918434
+[2025-03-03T22:49:42.068+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-24 196.1700 197.6700 195.1979 197.5700 6809823
+[2025-03-03T22:49:42.675+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-23 194.0300 196.4900 191.6300 195.9900 15235942
+[2025-03-03T22:49:43.174+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-20 187.0100 194.1354 186.3700 192.9600 45319703
+[2025-03-03T22:49:43.747+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-19 193.2800 194.6000 189.5200 189.7000 26981196
+[2025-03-03T22:49:44.366+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-18 196.8300 198.6899 189.2800 190.1500 27638416
+[2025-03-03T22:49:44.862+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-17 198.5300 202.8800 196.6900 197.1200 24129481
+[2025-03-03T22:49:45.390+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-16 194.3650 200.6400 194.1100 198.1600 32248640
+[2025-03-03T22:49:46.238+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-13 192.7100 194.3400 191.2600 191.3800 18883217
+[2025-03-03T22:49:46.861+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-12 196.3000 196.7053 193.2800 193.6300 25197757
+[2025-03-03T22:49:47.285+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-11 186.7000 196.8900 186.2600 196.7100 41664489
+[2025-03-03T22:49:48.055+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-10 184.5350 188.0300 182.6700 186.5300 34317438
+[2025-03-03T22:49:48.523+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-09 175.7150 178.0400 175.4000 177.1000 19887786
+[2025-03-03T22:49:49.120+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-06 173.8800 176.8389 173.5500 176.4900 13319549
+[2025-03-03T22:49:49.697+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-05 177.3200 177.7100 174.0100 174.3100 16145520
+[2025-03-03T22:49:50.208+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-04 172.7800 176.4300 172.7500 176.0900 18239842
+[2025-03-03T22:49:50.878+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-03 173.1200 174.3200 172.5100 173.0200 15721483
+[2025-03-03T22:49:51.567+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-12-02 170.3200 173.6000 170.2700 172.9800 16593444
+[2025-03-03T22:49:52.202+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-29 170.0600 170.8700 168.7500 170.4900 9250712
+[2025-03-03T22:49:52.718+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-27 170.6800 171.1400 169.6700 170.8200 12433371
+[2025-03-03T22:49:53.578+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-26 169.4900 171.4950 169.4300 170.6200 14937478
+[2025-03-03T22:49:54.238+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-25 167.9900 170.4600 167.4000 169.4300 21395652
+[2025-03-03T22:49:54.860+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-22 167.1600 168.2645 165.7100 166.5700 24497042
+[2025-03-03T22:49:55.582+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-21 175.4550 175.5800 165.3100 169.2400 38839431
+[2025-03-03T22:49:56.087+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-20 178.8300 179.1100 175.3300 177.3300 15729806
+[2025-03-03T22:49:56.556+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-19 175.2350 180.1700 175.1160 179.5800 15392866
+[2025-03-03T22:49:57.011+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-18 174.9550 176.9100 174.4200 176.8000 18725422
+[2025-03-03T22:49:57.434+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-15 175.6400 175.8800 172.7450 173.8900 21708870
+[2025-03-03T22:49:57.827+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-14 179.7500 180.4450 176.0300 177.3500 17925763
+[2025-03-03T22:49:58.329+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-13 182.1500 182.6150 180.1200 180.4900 13969709
+[2025-03-03T22:49:58.700+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-12 181.3800 184.0250 180.9900 183.3200 14065845
+[2025-03-03T22:49:59.355+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-11 180.0700 182.0850 179.9900 181.9700 12503422
+[2025-03-03T22:49:59.869+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-08 182.0000 182.3500 179.5700 179.8600 15021549
+[2025-03-03T22:50:00.357+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-07 179.1100 182.5800 178.8900 182.2800 16730407
+[2025-03-03T22:50:01.129+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-06 175.3500 178.6400 175.0400 178.3300 27061510
+[2025-03-03T22:50:01.575+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-05 170.8300 172.0973 170.3700 171.4100 12518282
+[2025-03-03T22:50:01.986+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-04 171.2400 171.9200 169.4850 170.6800 16193994
+[2025-03-03T22:50:02.379+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-11-01 171.5400 173.8200 170.3100 172.6500 21752859
+[2025-03-03T22:50:03.182+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-10-31 174.7200 178.4200 172.5600 172.6900 32801898
+[2025-03-03T22:50:03.970+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-10-30 182.4100 183.7900 175.7451 176.1400 49698313
+[2025-03-03T22:50:04.772+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-10-29 169.3850 171.8600 168.6600 171.1400 28916106
+[2025-03-03T22:50:05.171+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-10-28 170.5900 170.6060 165.7900 168.3400 20858254
+[2025-03-03T22:50:05.731+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-10-25 165.3650 167.4000 165.2300 166.9900 14566410
+[2025-03-03T22:50:06.415+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-10-24 164.5900 165.0500 162.7700 164.5300 12764430
+[2025-03-03T22:50:06.930+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-10-23 166.4300 167.6000 163.6325 164.4800 12754283
+[2025-03-03T22:50:07.441+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-10-22 164.7000 167.4700 164.6700 166.8200 11958617
+[2025-03-03T22:50:07.825+0000] {logging_mixin.py:190} INFO - Shivam GOOG 2024-10-21 164.5800 166.2200 164.3050 165.8000 11384047
+[2025-03-03T22:50:17.679+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-03-03T22:50:17.682+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-03T22:50:17.732+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-03-03T22:50:17.735+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=train_predict, task_id=etl_full_refresh, run_id=manual__2025-03-03T22:49:05.766617+00:00, execution_date=20250303T224905, start_date=20250303T224909, end_date=20250303T225017
+[2025-03-03T22:50:17.904+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-03T22:50:17.927+0000] {taskinstance.py:3925} ERROR - Error scheduling downstream tasks. Skipping it as this is entirely optional optimisation. There might be various reasons for it, please take a look at the stack trace to figure out if the root cause can be diagnosed and fixed. See the issue https://github.com/apache/***/issues/39717 for details and an example problem. If you would like to get help in solving root cause, open discussion with all details with your managed service support or in Airflow repository.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3921, in schedule_downstream_tasks
+    return TaskInstance._schedule_downstream_tasks(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3870, in _schedule_downstream_tasks
+    partial_dag = task.dag.partial_subset(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 2664, in partial_subset
+    t.task_id: _deepcopy_task(t)
+               ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 2661, in _deepcopy_task
+    return copy.deepcopy(t, memo)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 143, in deepcopy
+    y = copier(memo)
+        ^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 1388, in __deepcopy__
+    setattr(result, k, copy.deepcopy(v, memo))
+                       ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 136, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 221, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 136, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 201, in _deepcopy_tuple
+    y = [deepcopy(a, memo) for a in x]
+         ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 162, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 259, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 136, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 221, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 162, in deepcopy
+    y = _reconstruct(x, memo, *rv)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 259, in _reconstruct
+    state = deepcopy(state, memo)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 136, in deepcopy
+    y = copier(x, memo)
+        ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 221, in _deepcopy_dict
+    y[deepcopy(key, memo)] = deepcopy(value, memo)
+                             ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/copy.py", line 151, in deepcopy
+    rv = reductor(4)
+         ^^^^^^^^^^^
+TypeError: cannot pickle '_thread.lock' object
+[2025-03-03T22:50:17.942+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

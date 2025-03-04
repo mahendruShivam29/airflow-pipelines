@@ -1,0 +1,19 @@
+[2025-03-03T18:54:00.666+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-03T18:54:00.713+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: train_predict.hello_world manual__2025-03-03T18:53:57.632110+00:00 [queued]>
+[2025-03-03T18:54:00.731+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: train_predict.hello_world manual__2025-03-03T18:53:57.632110+00:00 [queued]>
+[2025-03-03T18:54:00.733+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-03-03T18:54:00.758+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): hello_world> on 2025-03-03 18:53:57.632110+00:00
+[2025-03-03T18:54:00.776+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=567) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-03T18:54:00.779+0000] {standard_task_runner.py:72} INFO - Started process 570 to run task
+[2025-03-03T18:54:00.775+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'train_predict', 'hello_world', 'manual__2025-03-03T18:53:57.632110+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/train_predict.py', '--cfg-path', '/tmp/tmppys7t650']
+[2025-03-03T18:54:00.781+0000] {standard_task_runner.py:105} INFO - Job 9: Subtask hello_world
+[2025-03-03T18:54:00.879+0000] {task_command.py:467} INFO - Running <TaskInstance: train_predict.hello_world manual__2025-03-03T18:53:57.632110+00:00 [running]> on host b756940c1467
+[2025-03-03T18:54:01.039+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='train_predict' AIRFLOW_CTX_TASK_ID='hello_world' AIRFLOW_CTX_EXECUTION_DATE='2025-03-03T18:53:57.632110+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-03T18:53:57.632110+00:00'
+[2025-03-03T18:54:01.042+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-03-03T18:54:01.048+0000] {logging_mixin.py:190} INFO - Hello World
+[2025-03-03T18:54:01.049+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-03-03T18:54:01.067+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-03-03T18:54:01.069+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=train_predict, task_id=hello_world, run_id=manual__2025-03-03T18:53:57.632110+00:00, execution_date=20250303T185357, start_date=20250303T185400, end_date=20250303T185401
+[2025-03-03T18:54:01.118+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-03T18:54:01.148+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-03T18:54:01.152+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
