@@ -3,7 +3,7 @@ from airflow import DAG
 from datetime import datetime
 from airflow.decorators import task
 from airflow.providers.snowflake.hooks.snowflake import SnowflakeHook
-from airflow.operators.dagrun_trigger import TriggerDagRunOperator
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 
 def return_snowflake_conn():
     hook = SnowflakeHook(snowflake_conn_id='snowflake_conn')
