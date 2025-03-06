@@ -111,7 +111,7 @@ def predict(cursor, forecast_function_name, train_input_table, forecast_table, f
         raise e
 
 with DAG(
-    dag_id = 'train_predict',
+    dag_id = 'etl_using_full_refresh_and_then_train_predict',
     start_date = datetime(2025, 3, 3),
     catchup = False,
     tags = ['ML', 'ELT']
@@ -122,5 +122,4 @@ with DAG(
     forecast_function_name = "DEV.ANALYTICS.PREDICT_"
     final_table = "DEV.ANALYTICS.MARKET_DATA"
     cursor = return_snowflake_conn()
-    
     etl_full_refresh(cursor, train_input_table) >> train(cursor, train_input_table, train_view, forecast_function_name) >> predict(cursor, forecast_function_name, train_input_table, forecast_table, final_table)
