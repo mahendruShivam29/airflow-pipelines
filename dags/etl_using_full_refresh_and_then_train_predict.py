@@ -11,15 +11,19 @@ def return_snowflake_conn():
     return conn.cursor()
 
 @task
-def etl_full_refresh(cursor, train_input_table):
-    vantage_api_key = Variable.get('vantage_api_key')
+def extract(cursor, train_input_table):
     symbol = "GOOG"
-    records = 0
+    vantage_api_key = Variable.get('vantage_api_key')
     url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={vantage_api_key}"
     r = requests.get(url)
     data = r.json()
+    return data
 
-    # Loading with Full Refresh.
+@task
+def tl_full_refresh(cursor, data, train_input_table):
+    symbol = "GOOG"
+    records = 0
+    # Transform and Loading with Full Refresh.
     try:
         cursor.execute("BEGIN;")
         create_stock_table = f"""CREATE TABLE IF NOT EXISTS {train_input_table} (
@@ -42,6 +46,7 @@ def etl_full_refresh(cursor, train_input_table):
             close = data['Time Series (Daily)'][d]['4. close']
             volume = data['Time Series (Daily)'][d]['5. volume']
 
+            print(f"INSERT INTO {train_input_table} ({symbol}, {d}, {open}, {high}, {low}, {close}, {volume})")
             insert_statement = f"INSERT INTO {train_input_table} (stock_symbol, date, open, high, low, close, volume) VALUES (%s, %s, %s, %s, %s, %s, %s)"
             cursor.execute(insert_statement, (symbol, d, open, high, low, close, volume))
             
@@ -122,4 +127,9 @@ with DAG(
     forecast_function_name = "DEV.ANALYTICS.PREDICT_"
     final_table = "DEV.ANALYTICS.MARKET_DATA"
     cursor = return_snowflake_conn()
-    etl_full_refresh(cursor, train_input_table) >> train(cursor, train_input_table, train_view, forecast_function_name) >> predict(cursor, forecast_function_name, train_input_table, forecast_table, final_table)
+    extract_data = extract(cursor, train_input_table)
+    transform_and_load = tl_full_refresh(cursor, extract_data, train_input_table)
+    train = train(cursor, train_input_table, train_view, forecast_function_name)
+    predict = predict(cursor, forecast_function_name, train_input_table, forecast_table, final_table)
+
+    extract_data >> transform_and_load >> train >> predict
