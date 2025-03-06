@@ -3,6 +3,7 @@ from airflow import DAG
 from datetime import datetime
 from airflow.decorators import task
 from airflow.providers.snowflake.hooks.snowflake import SnowflakeHook
+from airflow.operators.dagrun_trigger import TriggerDagRunOperator
 
 def return_snowflake_conn():
     hook = SnowflakeHook(snowflake_conn_id='snowflake_conn')
@@ -85,4 +86,12 @@ with DAG(
     symbols = ['AAPL', 'GOOG']
     stock_data_table = "DEV.LAB.STOCK_DATA"
     stock_data = extract_and_transform_last_180d_data_from_yfinance(cursor, symbols)
-    load_stock_data(cursor, stock_data, stock_data_table)
+    load_data = load_stock_data(cursor, stock_data, stock_data_table)
+    trigger_train_predict = TriggerDagRunOperator(
+        task_id = 'trigger_train_predict',
+        trigger_dag_id = 'train_predict_stock_data',
+        execution_date = '{{ ds }}',
+        reset_dag_run = True
+    )
+
+    stock_data >> load_data >> trigger_train_predict
